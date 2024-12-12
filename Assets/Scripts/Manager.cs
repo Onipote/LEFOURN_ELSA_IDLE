@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class WorkingForMoney : MonoBehaviour
+public class Manager : MonoBehaviour
 {
-    public int coin;
+    public ToolsT1Acquisition t1Effect;
+    public ToolsT2Acquisition t2Effect;
+    public float coin;
     public TextMeshProUGUI coinText;
-
+    public float clickMultiplier;
+    public float dollarsAdded;
     private void Start()
     {
         coin = 0;
@@ -20,6 +23,6 @@ public class WorkingForMoney : MonoBehaviour
 
     public void Working()
     {
-        coin++;
+        coin += dollarsAdded * clickMultiplier;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class BuyingAtStores : MonoBehaviour
 {
-    public WorkingForMoney bankAccount;
+    public Manager bankAccount;
 
     public GameObject upgWoodType, upgWoodShape, upgPaintPot, upgScrewCovers, upgHandleType, upgEmblemType;
     public GameObject upgSheetType, upgCushionType, upgPaddingType, upgNameplateType;

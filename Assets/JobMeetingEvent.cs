@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class JobMeetingEvent : MonoBehaviour
 {
-    public WorkingForMoney coin;
+    public Manager coin;
     [SerializeField] private GameObject _jobText;
     [SerializeField] private GameObject _employeeCards;
     [SerializeField] private int timer = 0;
