@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ToolsT1Acquisition : MonoBehaviour
 {
     public Manager bankAccount;
     public bool shearsAcquired= false, hatchetAcquired = false, merlinAcquired = false, sabersawAcquired = false, logsawAcquired = false, chainsawAcquired = false;
+    public float shearsTime, hatchetTime, merlinTime, sabersawTime, logsawTime, chainsawTime;
     
     public void BuyShears()
     {
@@ -14,6 +16,7 @@ public class ToolsT1Acquisition : MonoBehaviour
             bankAccount.coin -= 1;
             shearsAcquired = true;
             bankAccount.dollarsAdded += 1;
+            shearsTime = 5f;
         }
     }
     
@@ -24,6 +27,7 @@ public class ToolsT1Acquisition : MonoBehaviour
             bankAccount.coin -= 2;
             hatchetAcquired = true;
             bankAccount.dollarsAdded += 6;
+            hatchetTime = 10f;
         }
     }
     
@@ -34,6 +38,7 @@ public class ToolsT1Acquisition : MonoBehaviour
             bankAccount.coin -= 3;
             merlinAcquired = true;
             bankAccount.dollarsAdded += 8;
+            merlinTime = 20f;
         }
     }
     
@@ -44,6 +49,7 @@ public class ToolsT1Acquisition : MonoBehaviour
             bankAccount.coin -= 4;
             sabersawAcquired = true;
             bankAccount.dollarsAdded += 112;
+            sabersawTime = 40f;
         }
     }
     
@@ -54,6 +60,7 @@ public class ToolsT1Acquisition : MonoBehaviour
             bankAccount.coin -= 5;
             logsawAcquired = true;
             bankAccount.dollarsAdded += 0;
+            logsawTime = 80f;
         }
     }
     
@@ -64,6 +71,7 @@ public class ToolsT1Acquisition : MonoBehaviour
             bankAccount.coin -= 6;
             chainsawAcquired = true;
             bankAccount.dollarsAdded += 0;
+            chainsawTime = 160f;
         }
     }
 }
