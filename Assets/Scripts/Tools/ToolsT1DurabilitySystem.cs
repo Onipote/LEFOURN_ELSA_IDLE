@@ -9,28 +9,44 @@ public class ToolsT1DurabilitySystem : MonoBehaviour
     
     public Image shearsDurability, hatchetDurability, merlinDurability, sabersawDurability, logsawDurability, chainsawDurability;
     public int hpMax = 100;
-    public float hp;
+    public float hp1, hp2, hp3, hp4, hp5, hp6;
 
     private void Start()
     {
-        hp = hpMax;
+        hp1 = hpMax;
+        
     }
 
     void Update()
     {
         if (toolProperties.shearsAcquired == true)
         {
-            shearsDurability.fillAmount = hp / hpMax;
-            StartCoroutine(ShearsDurability());
+            shearsDurability.fillAmount = hp1 / hpMax;
         }
-    }
-
-    public IEnumerator ShearsDurability()
-    {
-        while (hp > 0)
+        
+        if (toolProperties.hatchetAcquired == true)
         {
-            yield return new WaitForSeconds(toolProperties.shearsTime);
-            hp = hp - 1;
+            shearsDurability.fillAmount = hp2 / hpMax;
+        }
+        
+        if (toolProperties.merlinAcquired == true)
+        {
+            shearsDurability.fillAmount = hp3 / hpMax;
+        }
+        
+        if (toolProperties.sabersawAcquired == true)
+        {
+            shearsDurability.fillAmount = hp4 / hpMax;
+        }
+        
+        if (toolProperties.logsawAcquired == true)
+        {
+            shearsDurability.fillAmount = hp5 / hpMax;
+        }
+        
+        if (toolProperties.chainsawAcquired == true)
+        {
+            shearsDurability.fillAmount = hp6 / hpMax;
         }
     }
 }

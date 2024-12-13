@@ -16,7 +16,7 @@ public class ToolsT1Acquisition : MonoBehaviour
             bankAccount.coin -= 1;
             shearsAcquired = true;
             bankAccount.dollarsAdded += 1;
-            shearsTime = 5f;
+            shearsTime = 1f;
         }
     }
     
@@ -27,7 +27,7 @@ public class ToolsT1Acquisition : MonoBehaviour
             bankAccount.coin -= 2;
             hatchetAcquired = true;
             bankAccount.dollarsAdded += 6;
-            hatchetTime = 10f;
+            hatchetTime = 2f;
         }
     }
     
