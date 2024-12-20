@@ -161,7 +161,6 @@ GameObject:
   - component: {fileID: 6537683328545624831}
   - component: {fileID: 4543023812128121860}
   - component: {fileID: 6818302572571097174}
-  - component: {fileID: -879886428029178441}
   m_Layer: 5
   m_Name: InventoryPrefab
   m_TagString: Untagged
@@ -228,24 +227,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-879886428029178441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8517787103544187322}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66942a716f3b5c941b9854aff811a307, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toolProperties: {fileID: 0}
-  shearsDurability: {fileID: 0}
-  hatchetDurability: {fileID: 0}
-  merlinDurability: {fileID: 0}
-  sabersawDurability: {fileID: 0}
-  logsawDurability: {fileID: 0}
-  chainsawDurability: {fileID: 0}
-  hpMax: 100
-  hp: 0

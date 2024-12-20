@@ -6,27 +6,49 @@ using UnityEngine.UI;
 
 public class Durability : MonoBehaviour
 {
+    public Manager bankAccount;
+    
     public Image healthbar;
     public float maxHp = 100;
     public float hp;
+    
+    private bool isDurabilityStartLaunched = false;
+    public float price;
+    public float additionalDollars;
     public float hpLossInterval;
 
     private void Start()
     {
         hp = maxHp;
     }
-
-    void Update()
+    
+    public void BuyTool()
     {
-            healthbar.fillAmount = hp / maxHp;
-    }
-
-    public IEnumerator ShearsDurability()
-    {
-            while (hp > 0)
+        if (bankAccount.coin >= price && isDurabilityStartLaunched == false)
+        {
+            bankAccount.coin -= price;
+            if (isDurabilityStartLaunched == false) 
             {
-                hp = hp - 1;
-                yield return new WaitForSeconds(hpLossInterval);
+                isDurabilityStartLaunched = true; 
+                StartCoroutine(DurabilityStart());
             }
+            bankAccount.dollarsAdded += additionalDollars;
+        }
+    }
+    
+    public IEnumerator DurabilityStart()
+    { 
+        //start tool effect (dollars added + losing hp according to the interval)
+        while (hp > 0)
+        {
+            hp = hp - 1;
+            healthbar.fillAmount = hp / maxHp;
+            yield return new WaitForSeconds(hpLossInterval);
+        }
+        //reset info
+        isDurabilityStartLaunched = false;
+        hp = maxHp;
+        healthbar.fillAmount = hp / maxHp;
+        bankAccount.dollarsAdded -= additionalDollars;
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
-    public ToolsT1Acquisition t1Effect;
     public ToolsT2Acquisition t2Effect;
     public float coin;
     public TextMeshProUGUI coinText;
