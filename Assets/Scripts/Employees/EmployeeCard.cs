@@ -6,8 +6,8 @@ using UnityEngine;
 public class EmployeeCard : ScriptableObject
 {
     public string cardName;
-    public string cardStatus;
-    public Sprite cardPicture;
-    public int cardAutoClick;
-    public string cardDescription;
+    public EmployeeType status;
+    public Sprite picture;
+    public int autoClick;
+    public string description;
 }
