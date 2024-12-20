@@ -12,6 +12,7 @@ public class Durability : MonoBehaviour
     public float maxHp = 100;
     public float hp;
     
+    public GameObject tool;
     private bool isDurabilityStartLaunched = false;
     public float price;
     public float additionalDollars;
@@ -26,6 +27,7 @@ public class Durability : MonoBehaviour
     {
         if (bankAccount.coin >= price && isDurabilityStartLaunched == false)
         {
+            tool.SetActive(true);
             bankAccount.coin -= price;
             if (isDurabilityStartLaunched == false) 
             {
@@ -46,6 +48,7 @@ public class Durability : MonoBehaviour
             yield return new WaitForSeconds(hpLossInterval);
         }
         //reset info
+        tool.SetActive(false);
         isDurabilityStartLaunched = false;
         hp = maxHp;
         healthbar.fillAmount = hp / maxHp;
