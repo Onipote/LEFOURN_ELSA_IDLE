@@ -8,6 +8,6 @@ public class EmployeeCard : ScriptableObject
     public string cardName;
     public EmployeeType status;
     public Sprite picture;
-    public int autoClick;
+    public float autoClick;
     public string description;
 }

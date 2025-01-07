@@ -8,6 +8,8 @@ using Random = UnityEngine.Random;
 
 public class CardReader : MonoBehaviour
 { 
+    public Autowork auto;
+    
     [SerializeField] private TextMeshProUGUI nameText, statusText, autoclickText, descriptionText;
     [SerializeField] private Image cardPicture;
     
@@ -46,6 +48,6 @@ public class CardReader : MonoBehaviour
                 currentCard.autoClick = Random.Range(1, 4);
                 break;
         }
-        autoclickText.text = currentCard.autoClick.ToString("00");
+        autoclickText.text = currentCard.autoClick.ToString("0");
     }
 }

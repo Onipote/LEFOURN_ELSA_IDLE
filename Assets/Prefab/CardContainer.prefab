@@ -426,6 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 196fb6eaacc7be346bf9697c2db9337d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  auto: {fileID: 0}
   nameText: {fileID: 2139010142727938873}
   statusText: {fileID: 7998368805603333889}
   autoclickText: {fileID: 4035552690549103276}
@@ -519,13 +520,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4027895335293936832}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 3145611170373096130}
+        m_TargetAssemblyTypeName: CardReader, Assembly-CSharp
+        m_MethodName: SaveInfo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
