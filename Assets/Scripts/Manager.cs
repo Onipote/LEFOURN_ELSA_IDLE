@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
-    public ToolsT2Acquisition t2Effect;
     public float coin;
     public TextMeshProUGUI coinText;
     public float clickMultiplier;
@@ -23,5 +22,6 @@ public class Manager : MonoBehaviour
     public void Working()
     {
         coin += dollarsAdded * clickMultiplier;
+        // coin = 1$ ; dollarsAdded = T1 ; clickMultiplier = T2 & Employees
     }
 }
