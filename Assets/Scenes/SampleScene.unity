@@ -578,7 +578,7 @@ PrefabInstance:
     - target: {fileID: 2226581727726938458, guid: 5b36add538897fb4fb7469de77928dcc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1624958306}
+      objectReference: {fileID: 1041024224}
     - target: {fileID: 2226581727726938458, guid: 5b36add538897fb4fb7469de77928dcc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SaveInfo
@@ -4361,7 +4361,7 @@ PrefabInstance:
     - target: {fileID: 2226581727726938458, guid: 5b36add538897fb4fb7469de77928dcc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1624958306}
+      objectReference: {fileID: 1041024224}
     - target: {fileID: 2226581727726938458, guid: 5b36add538897fb4fb7469de77928dcc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SaveInfo
@@ -4747,11 +4747,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b36c7f20d16aab43bfd929a47de4cf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reader: {fileID: 3145611170373096130, guid: 5b36add538897fb4fb7469de77928dcc, type: 3}
+  selectedCard: {fileID: 1041024224}
   blood: {fileID: 7358609848689423173, guid: 701a56b324ba1884db0067d6c471b95d, type: 3}
   spawner: {fileID: 334090107}
   minLimit: {fileID: 646989190}
   maxLimit: {fileID: 1208201785}
   pos: {x: 0, y: 0}
+  bloodCounter: 0
 --- !u!1 &640963606 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8517787103544187322, guid: 9b9df1bce67652f4f93374f91be77ff2, type: 3}
@@ -7262,13 +7265,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1041024223}
+  - component: {fileID: 1041024224}
   m_Layer: 5
   m_Name: JobMeeting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1041024223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7291,6 +7295,24 @@ RectTransform:
   m_AnchoredPosition: {x: -462, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1041024224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1041024222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f27b104ede4ae04ebf4accf2ba7112d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  auto: {fileID: 635540086}
+  cards:
+  - {fileID: 1954472895}
+  - {fileID: 1135781317}
+  - {fileID: 1141663385}
+  jobMeeting: {fileID: 1811131526}
 --- !u!1001 &1045586878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11318,7 +11340,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1624958304}
   - component: {fileID: 1624958305}
-  - component: {fileID: 1624958306}
   m_Layer: 0
   m_Name: Card containers
   m_TagString: Untagged
@@ -11374,24 +11395,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1624958306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1624958303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f27b104ede4ae04ebf4accf2ba7112d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  auto: {fileID: 635540086}
-  cards:
-  - {fileID: 1954472895}
-  - {fileID: 1135781317}
-  - {fileID: 1141663385}
-  jobMeeting: {fileID: 1811131526}
 --- !u!1 &1627448337 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8517787103544187322, guid: 9b9df1bce67652f4f93374f91be77ff2, type: 3}
@@ -12539,7 +12542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1811131527
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14679,7 +14682,7 @@ PrefabInstance:
     - target: {fileID: 2226581727726938458, guid: 5b36add538897fb4fb7469de77928dcc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1624958306}
+      objectReference: {fileID: 1041024224}
     - target: {fileID: 2226581727726938458, guid: 5b36add538897fb4fb7469de77928dcc, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: SaveInfo
@@ -14688,6 +14691,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: CardSelected, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 2226581727726938458, guid: 5b36add538897fb4fb7469de77928dcc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145611170373096130, guid: 5b36add538897fb4fb7469de77928dcc, type: 3}
+      propertyPath: selectedCard
+      value: 
+      objectReference: {fileID: 1041024224}
     - target: {fileID: 4027895335293936832, guid: 5b36add538897fb4fb7469de77928dcc, type: 3}
       propertyPath: m_Name
       value: CardContainer

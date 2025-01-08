@@ -8,10 +8,14 @@ public class CardSelected : MonoBehaviour
     public Autowork auto;
     public List<CardReader> cards;
     public GameObject jobMeeting;
-
+    
     public void SaveInfo(int index)
     {
         auto.value += cards[index].currentCard.autoClick;
+        for (int i = 0; i < 3; i++)
+        {
+            cards[i].RandomizeCards();
+        }
         jobMeeting.SetActive(false);
     }
 }

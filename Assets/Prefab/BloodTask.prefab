@@ -146,3 +146,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blood: {fileID: 7358609848689423173}
+  reader: {fileID: 3145611170373096130, guid: 5b36add538897fb4fb7469de77928dcc, type: 3}
+  spawner: {fileID: 0}
+  selectedCard: {fileID: 0}

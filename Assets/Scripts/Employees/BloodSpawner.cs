@@ -6,12 +6,16 @@ using Random = UnityEngine.Random;
 
 public class BloodSpawner : MonoBehaviour
 {
+    public CardReader reader;
+    public CardSelected selectedCard;
     public GameObject blood;
     public GameObject spawner;
     public Transform minLimit;
     public Transform maxLimit;
     public Vector2 pos;
 
+    public int bloodCounter;
+    
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
@@ -19,15 +23,29 @@ public class BloodSpawner : MonoBehaviour
             spawnBlood();
         }
     }
-
     private void spawnBlood()
     {
-        float screenX, screenY;
+        bloodCounter = Random.Range(1, 5);
         
-        screenX = Random.Range(minLimit.position.x, maxLimit.position.x);
-        screenY = Random.Range(minLimit.position.y, maxLimit.position.y);
-        pos = new Vector2(screenX, screenY);
+        for (int i = 0; i < bloodCounter; i++)
+        {
+            float screenX, screenY;
         
-        Instantiate(blood, pos, Quaternion.identity, spawner.transform);
+            screenX = Random.Range(minLimit.position.x, maxLimit.position.x);
+            screenY = Random.Range(minLimit.position.y, maxLimit.position.y);
+            pos = new Vector2(screenX, screenY);
+        
+            Instantiate(blood, pos, Quaternion.identity, spawner.transform);
+        }
+    }
+
+    public void Remove()
+    {
+        bloodCounter--;
+        
+        if (bloodCounter == 0)
+        {
+            selectedCard.jobMeeting.SetActive(true);
+        }
     }
 }

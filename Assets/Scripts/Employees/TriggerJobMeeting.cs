@@ -4,13 +4,20 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
-
+using Random = UnityEngine.Random;
 public class TriggerJobMeeting : MonoBehaviour
 {
-    public GameObject blood;
-    
+    public CardReader reader;
+    public BloodSpawner spawner;
+
+    private void Start()
+    {
+        spawner = FindObjectOfType<BloodSpawner>();
+    }
+
     public void Clean()
     {
-        Destroy(blood);
+        spawner.Remove();
+        Destroy(gameObject);
     }
 }
