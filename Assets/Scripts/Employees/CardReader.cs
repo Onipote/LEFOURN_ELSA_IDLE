@@ -4,21 +4,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 using Random = UnityEngine.Random;
 
 public class CardReader : MonoBehaviour
 { 
     public Autowork auto;
+    public TriggerJobMeeting triggerJM;
+    public CardSelected selectedCard;
     
     [SerializeField] private TextMeshProUGUI nameText, statusText, autoclickText, descriptionText;
     [SerializeField] private Image cardPicture;
     
     public EmployeeCard currentCard;
     [SerializeField] private EmployeeCard[] candidateList;
-    
-    private void Start()
+
+    private void StartJobMeeting()
     {
         ReadCard(candidateList[Random.Range(0, candidateList.Length)]);
+        selectedCard.jobMeeting.SetActive(true);
     }
 
     private void ReadCard(EmployeeCard newCard)
