@@ -9,6 +9,7 @@ public class CardSelected : MonoBehaviour
     public List<CardReader> cards;
     public GameObject jobMeeting;
     public bool autoworkStart = false;
+    
     public void SaveInfo(int index)
     {
         auto.value = cards[index].currentCard.autoClick;

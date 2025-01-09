@@ -11,15 +11,19 @@ public class Autowork : MonoBehaviour
     
     private void Start()
     {
-        cardSelected = FindObjectOfType<CardSelected>();
+        cardSelected = FindObjectOfType<CardSelected>();   
+
         StartCoroutine(Auto());
     }
 
     public IEnumerator Auto()
     {
-        while (cardSelected.autoworkStart == true)
+        while (true)
         {
-            bankAccount.coin++;
+            if (cardSelected.autoworkStart)
+            {
+                bankAccount.coin++;
+            }
             yield return new WaitForSeconds(value);
         }
     }
