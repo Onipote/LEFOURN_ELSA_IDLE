@@ -23,6 +23,7 @@ public class BloodSpawner : MonoBehaviour
     }
     public IEnumerator StartJobMeetings()
     {
+        yield return new WaitForSeconds(timeInterval);
         while (true)
         {
             spawnBlood();

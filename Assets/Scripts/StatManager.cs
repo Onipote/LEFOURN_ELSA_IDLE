@@ -8,7 +8,7 @@ public class StatManager : MonoBehaviour
 {
     public Manager manager;
     public Autowork autowork;
-    //public Effect_ToolsT2 effectTools;
+    public Effect_ToolsT2 effectTools;
     
     public TextMeshProUGUI clickCounterText;
     public TextMeshProUGUI clickAddedText;
@@ -18,13 +18,14 @@ public class StatManager : MonoBehaviour
     {
         manager = FindObjectOfType<Manager>();
         autowork = FindObjectOfType<Autowork>();
-        //effectTools = FindObjectOfType<Effect_ToolsT2>();
+        effectTools = FindObjectOfType<Effect_ToolsT2>();
     }
 
     private void Update()
     {
         clickCounterText.text = manager.myClickCounter.ToString("0");
+        clickAddedText.text = effectTools.additionalClick.ToString("1 clic x " + manager.clickMultiplier);
         dollarsEarnedCounterText.text = manager.dollarsAdded.ToString(manager.dollarsAdded + "$/click");
-        autoClickCounterText.text = autowork.value.ToString("+ 1$/" + autowork.value);
+        autoClickCounterText.text = autowork.value.ToString("+ 1$/" + autowork.value + "s");
     }
 }
