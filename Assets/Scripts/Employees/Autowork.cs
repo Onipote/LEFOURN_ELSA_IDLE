@@ -6,19 +6,21 @@ using UnityEngine;
 public class Autowork : MonoBehaviour
 {
     public Manager bankAccount;
+    public CardSelected cardSelected;
     public float value;
     
     private void Start()
     {
+        cardSelected = FindObjectOfType<CardSelected>();
         StartCoroutine(Auto());
     }
 
     public IEnumerator Auto()
     {
-        while (true)
+        while (cardSelected.autoworkStart == true)
         {
-            bankAccount.coin += value;
-            yield return new WaitForSeconds(2f);
+            bankAccount.coin++;
+            yield return new WaitForSeconds(value);
         }
     }
 }

@@ -6,8 +6,9 @@ using Random = UnityEngine.Random;
 
 public class BloodSpawner : MonoBehaviour
 {
-    public CardReader reader;
     public CardSelected selectedCard;
+
+    public float timeInterval;
     public GameObject blood;
     public GameObject spawner;
     public Transform minLimit;
@@ -15,13 +16,26 @@ public class BloodSpawner : MonoBehaviour
     public Vector2 pos;
 
     public int bloodCounter;
-    
-    private void Update()
+
+    public void Start()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        StartCoroutine(StartJobMeetings());
+    }
+    public IEnumerator StartJobMeetings()
+    {
+        while (true)
         {
             spawnBlood();
+            yield return new WaitForSeconds(timeInterval);
         }
+    }
+    private void Update()
+    {
+        /*if (Input.GetKeyDown(KeyCode.Space))
+        {
+            spawnBlood();
+        }*/
+        
     }
     private void spawnBlood()
     {

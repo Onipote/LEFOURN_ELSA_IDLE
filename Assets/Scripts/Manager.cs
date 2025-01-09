@@ -9,6 +9,7 @@ public class Manager : MonoBehaviour
     public TextMeshProUGUI coinText;
     public float clickMultiplier;
     public float dollarsAdded;
+    public int myClickCounter;
     private void Start()
     {
         coin = 0;
@@ -22,6 +23,7 @@ public class Manager : MonoBehaviour
     public void Working()
     {
         coin += dollarsAdded * clickMultiplier;
+        myClickCounter++;
         // coin = 1$ ; dollarsAdded = T1 ; clickMultiplier = T2 & Employees
     }
 }
