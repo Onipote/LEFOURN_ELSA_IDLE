@@ -6593,7 +6593,7 @@ MonoBehaviour:
   tool: {fileID: 558385061}
   price: 206
   additionalDollars: 411
-  hpLossInterval: 2
+  hpLossInterval: 2.5
 --- !u!224 &856964418 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1662890817289827640, guid: 5b36add538897fb4fb7469de77928dcc, type: 3}
@@ -10442,7 +10442,7 @@ MonoBehaviour:
   tool: {fileID: 1627448337}
   price: 50
   additionalDollars: 100
-  hpLossInterval: 1
+  hpLossInterval: 1.5
 --- !u!1 &1313402418
 GameObject:
   m_ObjectHideFlags: 0
@@ -13303,7 +13303,7 @@ MonoBehaviour:
   tool: {fileID: 305802492}
   price: 64
   additionalDollars: 128
-  hpLossInterval: 1.5
+  hpLossInterval: 2
 --- !u!1 &1749706573
 GameObject:
   m_ObjectHideFlags: 0
@@ -16138,10 +16138,6 @@ PrefabInstance:
       propertyPath: shearsDurability
       value: 
       objectReference: {fileID: 914670070}
-    - target: {fileID: 3961294310022958730, guid: 9b9df1bce67652f4f93374f91be77ff2, type: 3}
-      propertyPath: m_Name
-      value: HealthBar
-      objectReference: {fileID: 0}
     - target: {fileID: 6537683328545624831, guid: 9b9df1bce67652f4f93374f91be77ff2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -16249,22 +16245,6 @@ PrefabInstance:
     - target: {fileID: 6818302572571097174, guid: 9b9df1bce67652f4f93374f91be77ff2, type: 3}
       propertyPath: m_PreserveAspect
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101537519284291945, guid: 9b9df1bce67652f4f93374f91be77ff2, type: 3}
-      propertyPath: m_Type
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101537519284291945, guid: 9b9df1bce67652f4f93374f91be77ff2, type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101537519284291945, guid: 9b9df1bce67652f4f93374f91be77ff2, type: 3}
-      propertyPath: m_FillMethod
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101537519284291945, guid: 9b9df1bce67652f4f93374f91be77ff2, type: 3}
-      propertyPath: m_FillOrigin
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8517787103544187322, guid: 9b9df1bce67652f4f93374f91be77ff2, type: 3}
       propertyPath: m_Name
