@@ -7,7 +7,10 @@ using Random = UnityEngine.Random;
 public class BloodSpawner : MonoBehaviour
 {
     public CardSelected selectedCard;
-
+    
+    public AudioSource eventEffect;
+    public AudioSource cleaningEffect;
+    
     public float timeInterval;
     public GameObject blood;
     public GameObject spawner;
@@ -49,10 +52,12 @@ public class BloodSpawner : MonoBehaviour
 
     public void Remove()
     {
+        cleaningEffect.Play();
         bloodCounter--;
         
         if (bloodCounter == 0)
         {
+            eventEffect.Play();
             selectedCard.jobMeeting.SetActive(true);
         }
     }

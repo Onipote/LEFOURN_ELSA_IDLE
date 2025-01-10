@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class Durability : MonoBehaviour
 {
     public Manager bankAccount;
+    public AudioSource buyingEffect;
     
     public Image healthbar;
     public float maxHp = 100;
@@ -27,6 +28,7 @@ public class Durability : MonoBehaviour
     {
         if (bankAccount.coin >= price && isDurabilityStartLaunched == false)
         {
+            buyingEffect.Play();
             tool.SetActive(true);
             bankAccount.coin -= price;
             if (isDurabilityStartLaunched == false) 
