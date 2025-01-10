@@ -15,99 +15,99 @@ public class BuyingAtStores : MonoBehaviour
     
     public void BuyWoodType()
     {
-        if (bankAccount.coin >= 1 && upg1IsActivated == false)
+        if (bankAccount.coin >= 100000 && upg1IsActivated == false)
         {
             upgWoodType.SetActive(true);
-            bankAccount.coin -= 1;
+            bankAccount.coin -= 100000;
             upg1IsActivated = true;
         }
     }
     public void BuyWoodShape()
     {
-        if (bankAccount.coin >= 2 && upg1IsActivated == true && upg2IsActivated == false)
+        if (bankAccount.coin >= 5000000 && upg1IsActivated == true && upg2IsActivated == false)
         {
             upgWoodShape.SetActive(true);
-            bankAccount.coin -= 2;
+            bankAccount.coin -= 5000000;
             upg2IsActivated = true;
         }
     }
     
     public void BuyPaintPot()
     {
-        if (bankAccount.coin >= 3 && upg2IsActivated == true && upg3IsActivated == false)
+        if (bankAccount.coin >= 10000000 && upg2IsActivated == true && upg3IsActivated == false)
         {
             upgPaintPot.SetActive(true);
-            bankAccount.coin -= 3;
+            bankAccount.coin -= 10000000;
             upg3IsActivated = true;
         }
     }
 
     public void BuyScrewCovers()
     {
-        if (bankAccount.coin >= 4 && upg3IsActivated == true && upg4IsActivated == false)
+        if (bankAccount.coin >= 15000000 && upg3IsActivated == true && upg4IsActivated == false)
         {
             upgScrewCovers.SetActive(true);
-            bankAccount.coin -= 4;
+            bankAccount.coin -= 15000000;
             upg4IsActivated = true;
         }
     }
     
     public void BuyHandleType()
     {
-        if (bankAccount.coin >= 5 && upg4IsActivated == true && upg5IsActivated == false)
+        if (bankAccount.coin >= 30000000 && upg4IsActivated == true && upg5IsActivated == false)
         {
             upgHandleType.SetActive(true);
-            bankAccount.coin -= 5;
+            bankAccount.coin -= 30000000;
             upg5IsActivated = true;
         }
     }
     
     public void BuyEmblemType()
     {
-        if (bankAccount.coin >= 6 && upg5IsActivated == true && upg6IsActivated == false)
+        if (bankAccount.coin >= 40000000 && upg5IsActivated == true && upg6IsActivated == false)
         {
             upgEmblemType.SetActive(true);
-            bankAccount.coin -= 6;
+            bankAccount.coin -= 40000000;
             upg6IsActivated = true;
         }
     }
     
     public void BuySheetType()
     {
-        if (bankAccount.coin >= 7 && upg6IsActivated == true && upg7IsActivated == false)
+        if (bankAccount.coin >= 45000000 && upg6IsActivated == true && upg7IsActivated == false)
         {
             upgSheetType.SetActive(true);
-            bankAccount.coin -= 7;
+            bankAccount.coin -= 45000000;
             upg7IsActivated = true;
         }
     }
     
     public void BuyCushionsType()
     {
-        if (bankAccount.coin >= 8 && upg7IsActivated == true && upg8IsActivated == false)
+        if (bankAccount.coin >= 80000000 && upg7IsActivated == true && upg8IsActivated == false)
         {
             upgCushionType.SetActive(true);
-            bankAccount.coin -= 8;
+            bankAccount.coin -= 80000000;
             upg8IsActivated = true;
         }
     }
     
     public void BuyPaddingType()
     {
-        if (bankAccount.coin >= 9 && upg8IsActivated == true && upg9IsActivated == false)
+        if (bankAccount.coin >= 95000000 && upg8IsActivated == true && upg9IsActivated == false)
         {
             upgPaddingType.SetActive(true);
-            bankAccount.coin -= 9;
+            bankAccount.coin -= 95000000;
             upg9IsActivated = true;
         }
     }
     
     public void BuyNameplateType()
     {
-        if (bankAccount.coin >= 10 && upg9IsActivated == true && upg10IsActivated == false)
+        if (bankAccount.coin >= 100000000 && upg9IsActivated == true && upg10IsActivated == false)
         {
             upgNameplateType.SetActive(true);
-            bankAccount.coin -= 10;
+            bankAccount.coin -= 100000000;
             upg10IsActivated = true;
         }
     }

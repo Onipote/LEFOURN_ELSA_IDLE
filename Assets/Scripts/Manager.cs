@@ -17,7 +17,7 @@ public class Manager : MonoBehaviour
 
     private void Update()
     {
-        coinText.text = coin.ToString("0$");
+        coinText.text = coin.ToString("$000 000 000");
     }
 
     public void Working()

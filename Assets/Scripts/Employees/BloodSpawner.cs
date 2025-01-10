@@ -30,14 +30,7 @@ public class BloodSpawner : MonoBehaviour
             yield return new WaitForSeconds(timeInterval);
         }
     }
-    private void Update()
-    {
-        /*if (Input.GetKeyDown(KeyCode.Space))
-        {
-            spawnBlood();
-        }*/
-        
-    }
+    
     private void spawnBlood()
     {
         bloodCounter = Random.Range(1, 5);

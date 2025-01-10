@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81896e4b2b1344a479cdbe6d592b6ad3, type: 3}
   m_Name: Ach_Tool-2
   m_EditorClassIdentifier: 
+  type: Craftmanship
   achDescription: Cutting Professional
   icon: {fileID: 21300000, guid: 5a9bf2e95f7e41d43865d3361fb21ee3, type: 3}

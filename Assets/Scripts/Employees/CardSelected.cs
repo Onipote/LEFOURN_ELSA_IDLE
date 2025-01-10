@@ -12,7 +12,7 @@ public class CardSelected : MonoBehaviour
     
     public void SaveInfo(int index)
     {
-        auto.value = cards[index].currentCard.autoClick;
+        auto.intervalAutoClick = cards[index].currentCard.autoClick;
         autoworkStart = true;
         for (int i = 0; i < 3; i++)
         {

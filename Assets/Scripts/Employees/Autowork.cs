@@ -2,12 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Autowork : MonoBehaviour
 {
     public Manager bankAccount;
     public CardSelected cardSelected;
-    public float value;
+    [FormerlySerializedAs("value")] public float intervalAutoClick;
     
     private void Start()
     {
@@ -22,9 +23,9 @@ public class Autowork : MonoBehaviour
         {
             if (cardSelected.autoworkStart)
             {
-                bankAccount.coin++;
+                bankAccount.coin += 50;
             }
-            yield return new WaitForSeconds(value);
+            yield return new WaitForSeconds(intervalAutoClick);
         }
     }
 }

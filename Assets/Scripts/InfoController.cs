@@ -1,26 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class InfoController : MonoBehaviour
 {
-    public TextMeshProUGUI info;
-    public Achievements[] list;
+    public TextMeshProUGUI achUnlocked, achDescription;
+    public Image icon;
     
-    void Start()
-    {
-        HideInfo();
-    }
-
-    public void DisplayInfo(string infoText,float duration=8f)
-    {
-        info.text = infoText;
-        Invoke(nameof(HideInfo), duration);
-    }
+    public Achievements currentInfo;
+    public Achievements[] achList;
     
-    public void HideInfo()
+    public void DisplayInfo()
     {
-        info.enabled = false;
+        achUnlocked.text = currentInfo.type;
+        achDescription.text = currentInfo.achDescription;
+        icon.sprite = currentInfo.icon;
     }
 }
