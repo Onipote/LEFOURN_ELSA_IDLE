@@ -23,6 +23,7 @@ public class Autowork : MonoBehaviour
         {
             if (cardSelected.autoworkStart)
             {
+                bankAccount.animWallet.SetTrigger("isEarningDollars");
                 bankAccount.coin += 50;
             }
             yield return new WaitForSeconds(intervalAutoClick);

@@ -4683,6 +4683,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c54f33a31601be540b3aee3943f4608c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animButton: {fileID: 783758953}
+  animWallet: {fileID: 1875555267}
   coin: 0
   coinText: {fileID: 1643228736}
   clickMultiplier: 1
@@ -5698,6 +5700,7 @@ GameObject:
   - component: {fileID: 783758952}
   - component: {fileID: 783758951}
   - component: {fileID: 783758950}
+  - component: {fileID: 783758953}
   m_Layer: 5
   m_Name: MainButton
   m_TagString: Untagged
@@ -5820,6 +5823,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783758948}
   m_CullTransparentMesh: 1
+--- !u!95 &783758953
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783758948}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9a0720f5c53bff41a4782ee031b2e79, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &794839658
 GameObject:
   m_ObjectHideFlags: 0
@@ -13825,6 +13849,8 @@ GameObject:
   - component: {fileID: 1875555263}
   - component: {fileID: 1875555265}
   - component: {fileID: 1875555264}
+  - component: {fileID: 1875555267}
+  - component: {fileID: 1875555266}
   m_Layer: 5
   m_Name: Currency
   m_TagString: Untagged
@@ -13890,6 +13916,42 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875555262}
   m_CullTransparentMesh: 1
+--- !u!111 &1875555266
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875555262}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations: []
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!95 &1875555267
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875555262}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fb6a916424ec2f94b9130afa7da0cb97, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1878577231
 GameObject:
   m_ObjectHideFlags: 0

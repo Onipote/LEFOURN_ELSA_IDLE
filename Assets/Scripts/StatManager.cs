@@ -27,7 +27,7 @@ public class StatManager : MonoBehaviour
         clickCounterText.text = manager.myClickCounter.ToString("0");
         clickAddedText.text = effectTools.additionalClick.ToString("1 clic x " + manager.clickMultiplier);
         dollarsEarnedCounterText.text = manager.dollarsAdded.ToString("$" + manager.dollarsAdded + "/click");
-        autoClickCounterText.text = autowork.intervalAutoClick.ToString("+ $1/" + autowork.intervalAutoClick + "s");
+        autoClickCounterText.text = autowork.intervalAutoClick.ToString("+ $50/" + autowork.intervalAutoClick + "s");
     }
 
     public void Save()
