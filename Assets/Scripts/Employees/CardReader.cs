@@ -38,21 +38,21 @@ public class CardReader : MonoBehaviour
         switch (currentCard.status)
         {
             case EmployeeType.Retired:
-                currentCard.autoClick = Random.Range(1, 3);
+                currentCard.autoClick = Random.Range(0.4f, 0.5f);
                 break;
 
             case EmployeeType.Worker:
-                currentCard.autoClick = Random.Range(3, 5);
+                currentCard.autoClick = Random.Range(0.3f, 0.4f);
                 break;
 
             case EmployeeType.Student:
-                currentCard.autoClick = Random.Range(2, 5);
+                currentCard.autoClick = Random.Range(0.2f, 0.3f);
                 break;
 
             case EmployeeType.Kid:
-                currentCard.autoClick = Random.Range(1, 4);
+                currentCard.autoClick = Random.Range(0.1f, 0.2f);
                 break;
         }
-        autoclickText.text = currentCard.autoClick.ToString("0");
+        autoclickText.text = "Autoclick interval : " + currentCard.autoClick.ToString("0.00");
     }
 }

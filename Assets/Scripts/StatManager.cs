@@ -27,7 +27,7 @@ public class StatManager : MonoBehaviour
         clickCounterText.text = manager.myClickCounter.ToString("0");
         clickAddedText.text = effectTools.additionalClick.ToString("1 clic x " + manager.clickMultiplier);
         dollarsEarnedCounterText.text = manager.dollarsAdded.ToString("$" + manager.dollarsAdded + "/click");
-        autoClickCounterText.text = autowork.intervalAutoClick.ToString("+ $50/" + autowork.intervalAutoClick + "s");
+        autoClickCounterText.text = "$100/" + autowork.intervalAutoClick.ToString("0.00") + "s";
     }
 
     public void Save()
@@ -37,6 +37,6 @@ public class StatManager : MonoBehaviour
         PlayerPrefs.SetInt("myClickCounter", manager.myClickCounter); //number of clicks made by the player
         PlayerPrefs.SetFloat("dollarsAdded", manager.dollarsAdded); //$1+$?
         PlayerPrefs.SetFloat("clickMultiplier", manager.clickMultiplier); //1 click * ?
-        PlayerPrefs.SetFloat("value", autowork.intervalAutoClick); //$50/?s
+        PlayerPrefs.SetFloat("value", autowork.intervalAutoClick); //$100/?s
     }
 }

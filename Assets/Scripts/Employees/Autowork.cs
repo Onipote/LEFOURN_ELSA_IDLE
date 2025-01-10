@@ -8,7 +8,7 @@ public class Autowork : MonoBehaviour
 {
     public Manager bankAccount;
     public CardSelected cardSelected;
-    [FormerlySerializedAs("value")] public float intervalAutoClick;
+    public float intervalAutoClick;
     
     private void Start()
     {
@@ -24,7 +24,7 @@ public class Autowork : MonoBehaviour
             if (cardSelected.autoworkStart)
             {
                 bankAccount.animWallet.SetTrigger("isEarningDollars");
-                bankAccount.coin += 50;
+                bankAccount.coin += 100;
             }
             yield return new WaitForSeconds(intervalAutoClick);
         }
